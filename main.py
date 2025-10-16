@@ -73,7 +73,7 @@ def create_children(parents_pool):
 
 def mutation(children_set):
     for i in range(len(children_set)):
-        if random.random() > 0.1:
+        if random.random() > 0.1: # mutation - está em 0.1, pode alterar para 0.5 para acompanhar
             continue
         mutated_position = int(random.random() * passcode_length)
         mutation_value = random.randint(passcode_lower_bound, passcode_upper_bound)
@@ -109,4 +109,5 @@ ax.set_xlim(0, max(1, len(success)-1))
 
 fig.tight_layout()
 plt.show()
+
 
